@@ -1,0 +1,22 @@
+{
+  "name": "job-listings",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "npx stylelint **/*.scss"
+  },
+  "devDependencies": {
+    "sass": "^1.69.6",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard-scss": "^12.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "nanostores": "^0.9.5"
+  }
+}

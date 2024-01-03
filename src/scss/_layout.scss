@@ -1,0 +1,95 @@
+
+:root {
+    --radius: 0.4rem;
+
+    --clr-lyan: hsl(180, 52%, 96%);
+    --clr-lyan-filters: hsl(180, 31%, 95%);
+    --clr-gyan: hsl(180, 8%, 52%);
+    --clr-gyan-dark: hsl(180, 14%, 20%);
+    --clr-dyan: hsl(180, 29%, 50%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
+
+    
+    --step--2: clamp(0.6075rem, 0.5962rem + 0.0565vw, 0.64rem);
+    --step--1: clamp(0.7294rem, 0.7048rem + 0.1228vw, 0.8rem);
+    --step-0: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+    --step-1: clamp(1.05rem, 0.9804rem + 0.3478vw, 1.25rem);
+    --step-2: clamp(1.26rem, 1.1548rem + 0.5261vw, 1.5625rem);
+    --step-3: clamp(1.05rem, 1.3584rem + 0.7674vw, 1.9531rem);
+    --step-4: clamp(1.8144rem, 1.5963rem + 1.0902vw, 2.4413rem);
+    --step-5: clamp(2.1775rem, 1.8734rem + 1.5207vw, 3.0519rem);
+
+    font-size: 15px;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    --_img-height: 100px;
+    --_img-url: url(/images/bg-header-mobile.svg);
+
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 
+        minmax(1rem, 1fr)
+        min(calc(100vw - 4rem), 100ch)
+        minmax(1rem, 1fr)
+    ;
+    background-color: var(--clr-lyan);
+    color: var(--clr-gyan-dark);
+
+
+    &::before {
+        content: '';
+        grid-column: 1 / -1;
+        inset: 0 0 auto 0;
+        height: var(--_img-height);
+        background-color: var(--clr-dyan);
+        background-image: var(--_img-url);
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @include mq {
+        --_img-height: 150px;
+        --_img-url: url(/images/bg-header-desktop.svg);
+    }
+}
+
+
+body, button, input {
+    font-family: 'League Spartan', system-ui, sans-serif;
+}
+
+
+.sr-only {
+    // @todo- find out how to properly style sr-only elements 
+    display: none;
+}
+
+
+main {
+    grid-column: 2 / -2;
+    display: grid;
+    gap: 1.5rem;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}

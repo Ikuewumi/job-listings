@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme" content="#5ca3a3" />
+    <meta name="description" content="A Frontend Mentor Challenge! Job listings with filtering" />
+    <meta name="keywords" content="frontend,javascript,html,css,frontendmentor,FMIO,frontend challenges">
+    <title>FMIO | Job Listings</title>
+  </head>
+  <body>
+    <header class="sr-only">
+      <h1>Job Listings</h1>
+    </header>
+
+
+    <main>
+      <section id="filters">
+        <ul>
+        </ul>
+
+        <button>Clear</button>
+      </section>
+
+
+
+      <section id="jobs">
+        <ul>
+        </ul>
+      </section>
+    </main>
+
+
+    <template id="job">
+      <li>
+      <div class="job">
+
+        <img src="./public/images/photosnap.svg" alt="photosnap">
+
+        <div class="job-info">
+          <div>
+            <h2>Photosnap</h2>
+          </div>
+
+          <strong>Senior Frontend Developer</strong>
+
+          <div>
+            <span>1d ago</span>
+            <span>Full Time</span>
+            <span>USA only</span>
+          </div>
+        </div>
+
+
+        <ul class="job-filters">
+          <li><button>Frontend</button></li>
+          <li><button>Senior</button></li>
+          <li><button>HTML</button></li>
+          <li><button>CSS</button></li>
+          <li><button>JavaScript</button></li>
+        </ul>
+
+
+
+      </div>
+    </li>
+    </template>
+
+    <template id="filter">
+      <li>
+        <span>Frontend</span>
+        <button title="Remove">
+          <svg viewBox="0 0 14 14"><use href="#material-symbols-close"></use></svg>
+        </button>
+      </li>
+    </template>
+
+
+
+    <svg style="display: none;" aria-hidden="true">
+      <symbol viewBox="0 0 14 14" id="material-symbols-close"><path fill="#FFF" fill-rule="evenodd" d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"/></symbol>
+    </svg>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
